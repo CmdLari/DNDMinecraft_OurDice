@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
-	"id": "template-mod",
+	"id": "ourdice",
 	"version": "${version}",
-	"name": "Template Mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Our Dice Mod",
+	"description": "Roll Dice...",
 	"authors": [
 		"Me!"
 	],
@@ -23,9 +23,9 @@
 		]
 	},
 	"mixins": [
-		"template-mod.mixins.json",
+		"ourdice.mixins.json",
 		{
-			"config": "template-mod.client.mixins.json",
+			"config": "ourdice.client.mixins.json",
 			"environment": "client"
 		}
 	],

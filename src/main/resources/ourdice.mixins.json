@@ -3,7 +3,7 @@
 	"package": "net.lari.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"OurDiceMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

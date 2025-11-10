@@ -16,21 +16,25 @@ public class OurDice implements ClientModInitializer {
 
             dispatcher.register(
                     ClientCommandManager.literal("roll")
+                            // Case 1: `/roll` with no argument
+                            .executes(context -> {
+                                DieLogic logic = new DieLogic(); // uses default 1d20
+                                context.getSource().sendFeedback(Component.literal(logic.result));
+                                return 1;
+                            })
+
+                            // Case 2: `/roll <dice>`
                             .then(ClientCommandManager.argument("dice", StringArgumentType.string())
                                     .executes(context -> {
-
                                         String dice = context.getArgument("dice", String.class);
 
                                         DieLogic logic = new DieLogic(dice);
-                                        String result = logic.result;
-
-                                        // Send feedback to client player
-                                        context.getSource().sendFeedback(Component.literal(result));
+                                        context.getSource().sendFeedback(Component.literal(logic.result));
 
                                         return 1;
                                     })
                             )
-            )
+            );
         });
     }
 }
