@@ -30,8 +30,6 @@ Copy code
 ### Custom roll
 /roll 4d10
 
-markdown
-Copy code
 This rolls four ten-sided dice and displays the total.
 
 If you provide an invalid syntax (e.g., `/roll abc`, `/roll d20`, `/roll 2d`), you’ll receive a message:
@@ -43,17 +41,6 @@ If you provide an invalid syntax (e.g., `/roll abc`, `/roll d20`, `/roll 2d`), y
 - Main classes:
     - `OurDice` — client mod initializer, registers the `/roll` command
     - `DieLogic` — handles parsing the dice string and performing the roll logic
-- Feel free to fork and extend to add features such as:
-    - Showing each individual die result (not just the sum)
-    - Adding modifiers (e.g., `/roll 2d6+3`)
-    - Support for advantage/disadvantage mechanics
-    - Integration with chat output, log tracking, or scoreboard display
-
-## Contributing
-- Fork the repository
-- Add your feature or fix the issue
-- Submit a pull request describing your changes and why
-- Please ensure your code is well-commented and follows existing style
 
 ## License
 MIT
